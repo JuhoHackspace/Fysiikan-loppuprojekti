@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 st.title('Matka päiväkodilta kaupalle')
 
 # Load the gps data
-
-gps_data = pd.read_csv('./kiihtyvyys_sijainti/Location.csv')
+url = "https://raw.githubusercontent.com/JuhoHackspace/Fysiikan-loppuprojekti/refs/heads/main/kiihtyvyys_sijainti/Location.csv"
+gps_data = pd.read_csv(url)
 
 # Drawing a map of the route
 
@@ -69,7 +69,8 @@ st.write("Keskinopeus: ", mean_speed_formatted, "m/s")
 
 # Load the accelerometer data
 
-acceleration_data = pd.read_csv('./kiihtyvyys_sijainti/Linear Acceleration.csv')
+url_2 = "https://raw.githubusercontent.com/JuhoHackspace/Fysiikan-loppuprojekti/refs/heads/main/kiihtyvyys_sijainti/Linear%20Acceleration.csv"
+acceleration_data = pd.read_csv(url_2)
 
 # Subheader for the accelerometer data
 st.subheader('Kiihtyvyysdata')
